@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidget</class>
+ <widget class="QWidget" name="MainWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>975</width>
+    <height>630</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>DebugTool</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="srcfile.qrc">
+    <normaloff>:/icon/SrcFile/icon/tools.png</normaloff>:/icon/SrcFile/icon/tools.png</iconset>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="currentIndex">
+      <number>2</number>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>false</bool>
+     </property>
+     <property name="documentMode">
+      <bool>false</bool>
+     </property>
+     <property name="movable">
+      <bool>true</bool>
+     </property>
+     <widget class="SerialTool" name="SerialAssistant">
+      <attribute name="title">
+       <string>串口助手</string>
+      </attribute>
+     </widget>
+     <widget class="RealTimeWave" name="RSSI">
+      <attribute name="title">
+       <string>RSSI</string>
+      </attribute>
+     </widget>
+     <widget class="LogCapture" name="LogCaptureTool">
+      <attribute name="title">
+       <string>Log捕捉</string>
+      </attribute>
+     </widget>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QToolBox" name="toolBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>195</width>
+       <height>240</height>
+      </size>
+     </property>
+     <property name="layoutDirection">
+      <enum>Qt::LeftToRight</enum>
+     </property>
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="SerialPort" name="PortSerial">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>195</width>
+        <height>548</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>串口端口配置</string>
+      </attribute>
+     </widget>
+     <widget class="QWidget" name="SystemSettingPag">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>195</width>
+        <height>548</height>
+       </rect>
+      </property>
+      <attribute name="label">
+       <string>系统设置</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>串口同步显示数据</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_4">
+          <item row="1" column="0">
+           <widget class="QCheckBox" name="checkBox_SyncShow_LogCapture">
+            <property name="text">
+             <string>Log捕捉</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBox_SyncShow_RSSI">
+            <property name="text">
+             <string>RSSI</string>
+            </property>
+            <property name="checked">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>463</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>SerialTool</class>
+   <extends>QWidget</extends>
+   <header>serialtool.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RealTimeWave</class>
+   <extends>QWidget</extends>
+   <header>realtimewave.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LogCapture</class>
+   <extends>QWidget</extends>
+   <header>logcapture.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SerialPort</class>
+   <extends>QWidget</extends>
+   <header>serialport.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="srcfile.qrc"/>
+ </resources>
+ <connections/>
+</ui>

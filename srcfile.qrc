@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>SrcFile/icon/switch_1_off.png</file>
+        <file>SrcFile/icon/switch_1_on.png</file>
+        <file>SrcFile/icon/switch_off.png</file>
+        <file>SrcFile/icon/switch_on.png</file>
+        <file>SrcFile/icon/AppIcon.png</file>
+        <file>SrcFile/icon/refresh.png</file>
+        <file>SrcFile/icon/tools.png</file>
+        <file>SrcFile/icon/down.ico</file>
+        <file>SrcFile/icon/up.ico</file>
+    </qresource>
+</RCC>
